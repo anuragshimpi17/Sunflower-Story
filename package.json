@@ -1,0 +1,16 @@
+{
+  "name": "sunflower-scrollytelling",
+  "version": "1.0.0",
+  "description": "Interactive scroll-driven storytelling website depicting the lifecycle of a sunflower",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "node server/app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "keywords": ["scrollytelling", "gsap", "sunflower", "animation"],
+  "author": "",
+  "license": "MIT"
+}

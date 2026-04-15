@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An immersive scroll-driven storytelling experience depicting the lifecycle of a sunflower — from seed to bloom to dust.">
+  <title>The Life of a Sunflower — A Scroll Story</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+
+  <!-- ==================== LOADING OVERLAY ==================== -->
+  <div id="loader" class="loader">
+    <div class="loader__inner">
+      <div class="loader__seed">🌱</div>
+      <p class="loader__text">Planting the story…</p>
+    </div>
+  </div>
+
+  <!-- ==================== SCROLL PROGRESS BAR ==================== -->
+  <div id="progress-bar" class="progress-bar"></div>
+
+  <!-- ==================== NAVIGATION DOTS ==================== -->
+  <nav id="scene-nav" class="scene-nav" aria-label="Scene navigation">
+    <button class="scene-nav__dot active" data-scene="0" aria-label="Scene 1: Seed"></button>
+    <button class="scene-nav__dot" data-scene="1" aria-label="Scene 2: Sprout"></button>
+    <button class="scene-nav__dot" data-scene="2" aria-label="Scene 3: Growth"></button>
+    <button class="scene-nav__dot" data-scene="3" aria-label="Scene 4: Bee"></button>
+    <button class="scene-nav__dot" data-scene="4" aria-label="Scene 5: Bloom"></button>
+    <button class="scene-nav__dot" data-scene="5" aria-label="Scene 6: Aging"></button>
+    <button class="scene-nav__dot" data-scene="6" aria-label="Scene 7: Return"></button>
+  </nav>
+
+  <!-- ==================== SCROLL CUE ==================== -->
+  <div id="scroll-cue" class="scroll-cue">
+    <span class="scroll-cue__text">Scroll to begin</span>
+    <div class="scroll-cue__arrow">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN CONTENT — 7 SCENES ==================== -->
+  <main id="story">
+
+    <!-- SCENE 1 — SEED -->
+    <section id="scene-seed" class="scene scene--seed" data-scene-index="0">
+      <div class="scene__bg"></div>
+      <div class="scene__content">
+        <div class="scene__visual">
+          <!-- CSS-drawn seed -->
+          <div class="seed">
+            <div class="seed__body"></div>
+            <div class="seed__stripe"></div>
+          </div>
+          <!-- Soil particles -->
+          <div class="soil-particles">
+            <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+            <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+            <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+            <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+          </div>
+        </div>
+        <div class="scene__text">
+          <span class="scene__chapter">Chapter I</span>
+          <h1 class="scene__title">The Seed</h1>
+          <p class="scene__description">Buried beneath the earth, a tiny seed holds the blueprint of life — waiting for warmth, water, and the courage to break open.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 2 — SPROUT -->
+    <section id="scene-sprout" class="scene scene--sprout" data-scene-index="1">
+      <div class="scene__bg"></div>
+      <div class="scene__content">
+        <div class="scene__visual">
+          <!-- CSS-drawn sprout -->
+          <div class="sprout">
+            <div class="sprout__stem"></div>
+            <div class="sprout__leaf sprout__leaf--left"></div>
+            <div class="sprout__leaf sprout__leaf--right"></div>
+          </div>
+          <!-- Ground line -->
+          <div class="ground-line"></div>
+        </div>
+        <div class="scene__text">
+          <span class="scene__chapter">Chapter II</span>
+          <h2 class="scene__title">The Sprout</h2>
+          <p class="scene__description">A crack in the shell. A push through the darkness. The first tender leaves reach for the light they've never seen.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 3 — GROWTH -->
+    <section id="scene-growth" class="scene scene--growth" data-scene-index="2">
+      <div class="scene__bg"></div>
+      <div class="scene__content">
+        <div class="scene__visual">
+          <!-- CSS-drawn growing sunflower -->
+          <div class="growing-flower">
+            <div class="growing-flower__stem"></div>
+            <div class="growing-flower__leaf growing-flower__leaf--1"></div>
+            <div class="growing-flower__leaf growing-flower__leaf--2"></div>
+            <div class="growing-flower__leaf growing-flower__leaf--3"></div>
+            <div class="growing-flower__leaf growing-flower__leaf--4"></div>
+            <div class="growing-flower__bud"></div>
+          </div>
+        </div>
+        <div class="scene__text">
+          <span class="scene__chapter">Chapter III</span>
+          <h2 class="scene__title">The Growth</h2>
+          <p class="scene__description">Days turn to weeks. The stem thickens, leaves unfurl, and a bud forms — heavy with promise, turning always toward the sun.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 4 — BEE INTERACTION -->
+    <section id="scene-bee" class="scene scene--bee" data-scene-index="3">
+      <div class="scene__bg"></div>
+      <div class="scene__content">
+        <div class="scene__visual">
+          <!-- CSS-drawn flower for bee scene -->
+          <div class="flower-for-bee">
+            <div class="flower-for-bee__center"></div>
+            <div class="flower-for-bee__petals">
+              <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+              <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+              <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+              <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+            </div>
+            <div class="flower-for-bee__stem"></div>
+          </div>
+          <!-- Pollen particles -->
+          <div class="pollen-particles">
+            <span class="pollen"></span><span class="pollen"></span><span class="pollen"></span>
+            <span class="pollen"></span><span class="pollen"></span><span class="pollen"></span>
+          </div>
+        </div>
+        <div class="scene__text">
+          <span class="scene__chapter">Chapter IV</span>
+          <h2 class="scene__title">The Visitor</h2>
+          <p class="scene__description">A humble bee arrives — drawn by color and scent. In this ancient dance of pollination, two lives intertwine for the future of both.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 5 — FULL BLOOM -->
+    <section id="scene-bloom" class="scene scene--bloom" data-scene-index="4">
+      <div class="scene__bg"></div>
+      <div class="scene__content">
+        <div class="scene__visual">
+          <!-- CSS-drawn full sunflower -->
+          <div class="sunflower">
+            <div class="sunflower__glow"></div>
+            <div class="sunflower__petals">
+              <div class="sf-petal"></div><div class="sf-petal"></div><div class="sf-petal"></div>
+              <div class="sf-petal"></div><div class="sf-petal"></div><div class="sf-petal"></div>
+              <div class="sf-petal"></div><div class="sf-petal"></div><div class="sf-petal"></div>
+              <div class="sf-petal"></div><div class="sf-petal"></div><div class="sf-petal"></div>
+              <div class="sf-petal"></div><div class="sf-petal"></div><div class="sf-petal"></div>
+              <div class="sf-petal"></div><div class="sf-petal"></div><div class="sf-petal"></div>
+            </div>
+            <div class="sunflower__center"></div>
+            <div class="sunflower__stem"></div>
+          </div>
+          <!-- Sun rays -->
+          <div class="sun-rays">
+            <div class="ray"></div><div class="ray"></div><div class="ray"></div>
+            <div class="ray"></div><div class="ray"></div><div class="ray"></div>
+          </div>
+        </div>
+        <div class="scene__text">
+          <span class="scene__chapter">Chapter V</span>
+          <h2 class="scene__title">Full Bloom</h2>
+          <p class="scene__description">At the peak of summer, the sunflower opens fully — a golden crown facing the sky, radiating warmth and life in every direction.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 6 — AGING -->
+    <section id="scene-aging" class="scene scene--aging" data-scene-index="5">
+      <div class="scene__bg"></div>
+      <div class="scene__content">
+        <div class="scene__visual">
+          <!-- Aging sunflower (reuses bloom structure with aging classes) -->
+          <div class="aging-flower">
+            <div class="aging-flower__petals">
+              <div class="aged-petal"></div><div class="aged-petal"></div><div class="aged-petal"></div>
+              <div class="aged-petal"></div><div class="aged-petal"></div><div class="aged-petal"></div>
+              <div class="aged-petal"></div><div class="aged-petal"></div><div class="aged-petal"></div>
+              <div class="aged-petal"></div><div class="aged-petal"></div><div class="aged-petal"></div>
+            </div>
+            <div class="aging-flower__center"></div>
+            <div class="aging-flower__stem"></div>
+          </div>
+        </div>
+        <div class="scene__text">
+          <span class="scene__chapter">Chapter VI</span>
+          <h2 class="scene__title">The Fading</h2>
+          <p class="scene__description">Colors lose their fire. Petals curl and droop. The once-proud sunflower bows its head — not in defeat, but in quiet acceptance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 7 — DEATH / RETURN -->
+    <section id="scene-death" class="scene scene--death" data-scene-index="6">
+      <div class="scene__bg"></div>
+      <div class="scene__content">
+        <div class="scene__visual">
+          <!-- Dried flower and falling seeds -->
+          <div class="dead-flower">
+            <div class="dead-flower__head"></div>
+            <div class="dead-flower__stem"></div>
+          </div>
+          <div class="falling-seeds">
+            <span class="fallen-seed"></span><span class="fallen-seed"></span>
+            <span class="fallen-seed"></span><span class="fallen-seed"></span>
+            <span class="fallen-seed"></span><span class="fallen-seed"></span>
+            <span class="fallen-seed"></span><span class="fallen-seed"></span>
+          </div>
+        </div>
+        <div class="scene__text">
+          <span class="scene__chapter">Chapter VII</span>
+          <h2 class="scene__title">Return to Earth</h2>
+          <p class="scene__description">Seeds scatter on the wind and fall to the soil. One life ends — a thousand begin. The cycle is eternal.</p>
+        </div>
+      </div>
+      <!-- Restart prompt -->
+      <div class="restart-prompt">
+        <button id="btn-restart" class="btn-restart" aria-label="Scroll back to top">
+          <span>🌱</span> Begin Again
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <!-- GSAP + ScrollTrigger via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- App modules -->
+  <script src="/scripts/scenes.js"></script>
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
