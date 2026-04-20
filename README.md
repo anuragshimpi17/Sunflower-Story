@@ -51,27 +51,14 @@ NewIosProject/
 
 ## Deployment
 
-This project is set up for automatic deployment via GitHub Actions.
+This project is configured for automatic deployment with GitHub Pages.
 
-### Deploy to Render.com
+### GitHub Pages Setup
 
-1. Go to [Render.com](https://render.com) and sign up with your GitHub account
-2. Create a new **Web Service**
-3. Connect your GitHub repository `Hand-Lazer`
-4. Configure:
-   - **Build Command**: `npm install`
-   - **Start Command**: `npm start`
-   - **Environment**: Node
-5. Deploy!
+After each push to the `main` branch:
+1. GitHub Actions packages the `public/` folder
+2. GitHub Pages publishes the latest build
+3. View the deployment status in the **Actions** tab on GitHub
 
-Your app will be live at: `https://your-service-name.onrender.com`
-
-### GitHub Actions Setup
-
-After each push to `main` or `master` branch:
-1. GitHub Actions automatically builds and tests your code
-2. Deployment is triggered if build succeeds
-3. View workflows in the **Actions** tab on GitHub
-
-**Live Link**: [View Deployed Project](https://github.com/anuragshimpi17/Hand-Lazer)
+**Live Link**: [View Deployed Project](https://anuragshimpi17.github.io/JAVASCRIPT/)
 - **Performance**: GPU-accelerated transforms & opacity only
