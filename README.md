@@ -60,5 +60,5 @@ After each push to the `main` branch:
 2. GitHub Pages publishes the latest build
 3. View the deployment status in the **Actions** tab on GitHub
 
-**Live Link**: [View Deployed Project](https://anuragshimpi17.github.io/JAVASCRIPT/)
+**Live Link**: [View Deployed Project](https://anuragshimpi17.github.io/Hand-Lazer/)
 
